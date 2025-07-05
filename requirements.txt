@@ -1,6 +1,5 @@
-
-python-telegram-bot==20.8
-firebase-admin==6.4.0
-google-generativeai==0.8.0
-requests==2.32.0
-google-cloud-firestore==2.16.0
+python-telegram-bot
+requests
+yt-dlp
+firebase-admin
+google-generativeai
