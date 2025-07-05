@@ -1,1 +1,7 @@
-{ }
+{
+  "functions": {
+    "api/telegram.py": {
+      "runtime": "vercel-python@3.9"
+    }
+  }
+}
