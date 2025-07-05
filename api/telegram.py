@@ -6,21 +6,14 @@ import random
 import string
 import asyncio
 from typing import Dict, Any
-
 import telegram
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 import requests
 import yt_dlp
-
-# Firebase Admin SDK imports
 import firebase_admin
 from firebase_admin import credentials, firestore
-
-# Google Gemini API import
 import google.generativeai as genai
-
-# Configure logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
@@ -252,7 +245,7 @@ async def start_download_url(update: Update, context: ContextTypes.DEFAULT_TYPE)
 async def get_download_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Handles the direct URL download logic (placeholder)."""
     url = update.message.text
-    if not (url.startswith("http://") or url.startswith("https://")):
+    if not (url.startswith("http://") or (url.startswith("https://")):
         await update.message.reply_text('වලංගු URL එකක් ඇතුළත් කරන්න.')
         return DOWNLOAD_ASK_URL
     
