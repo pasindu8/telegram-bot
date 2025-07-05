@@ -245,7 +245,7 @@ async def start_download_url(update: Update, context: ContextTypes.DEFAULT_TYPE)
 async def get_download_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Handles the direct URL download logic (placeholder)."""
     url = update.message.text
-    if not (url.startswith("http://") or (url.startswith("https://")):
+    if not (url.startswith("http://") or url.startswith("https://")):
         await update.message.reply_text('වලංගු URL එකක් ඇතුළත් කරන්න.')
         return DOWNLOAD_ASK_URL
     
