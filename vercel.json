@@ -5,7 +5,7 @@
       "src": "api/telegram.py",
       "use": "@vercel/python@3.0.0",
       "config": {
-        "runtime": "python3.9" 
+        "runtime": "python3.11"
       }
     }
   ],
@@ -16,3 +16,4 @@
     }
   ],
   "installCommand": "pip3 install -r requirements.txt && apt-get update && apt-get install -y ffmpeg" 
+}
