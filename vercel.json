@@ -1,17 +1,12 @@
 {
-  "version": 2,
   "functions": {
     "api/telegram.py": {
-      "maxDuration": 30
+      "runtime": "python3.9"
     }
   },
   "routes": [
     {
       "src": "/api/telegram",
-      "dest": "/api/telegram.py"
-    },
-    {
-      "src": "/(.*)",
       "dest": "/api/telegram.py"
     }
   ]
