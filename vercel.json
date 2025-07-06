@@ -1,13 +1,19 @@
 {
-  "functions": {
-    "api/telegram.py": {
-      "runtime": "python3.9"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python@3.0.0", 
+      "config": {
+        "runtime": "python3.9" 
+      }
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/api/telegram",
-      "dest": "/api/telegram.py"
+      "src": "/api/(.*)",
+      "dest": "/api/index.py"
     }
-  ]
+  ],
+  "installCommand": "pip install -r requirements.txt && apt-get update && apt-get install -y ffmpeg"
 }
